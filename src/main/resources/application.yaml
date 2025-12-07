@@ -1,7 +1,18 @@
 spring:
-  application:
-    name: ecommerce-cart
-  database:
-     url:
-     username:
-     password:
+  datasource:
+     url: jdbc:mysql://localhost:3306/shopcart_db
+     username: root
+     password: 1155
+     driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+
+    server:
+      port: 8080
