@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: ecommerce-cart
+  database:
+     url:
+     username:
+     password:
