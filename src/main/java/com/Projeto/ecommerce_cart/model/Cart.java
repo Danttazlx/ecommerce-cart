@@ -2,6 +2,7 @@ package com.Projeto.ecommerce_cart.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.query.criteria.JpaOrder;
 
 import java.util.ArrayList;
 import java.util.List;
