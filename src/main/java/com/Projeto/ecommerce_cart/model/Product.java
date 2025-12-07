@@ -3,6 +3,9 @@ package com.Projeto.ecommerce_cart.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.math.BigDecimal;
+import java.util.List;
+
 
 @Data
 @Entity
@@ -15,15 +18,12 @@ public class Product {
     private long id;
 
     private String name;
-    private int quantity;
-    private double price;
-    private  String description;
+    private Integer quantity;
+    private BigDecimal price;
+    private String description;
 
-
-
-
-
-
+    @OneToMany(mappedBy = "product_id")
+    private List<Item> items;
 
 
 }
