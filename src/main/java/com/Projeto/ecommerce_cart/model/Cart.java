@@ -20,6 +20,10 @@ public class Cart {
     @JoinColumn(name = "user_id", unique = true )
     private User user;
 
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    private Product product;
+
 
     @OneToMany(mappedBy = "cart_id",cascade = CascadeType.REMOVE)
     private List<Item> items = new ArrayList<>();
