@@ -16,7 +16,7 @@ public class CartController {
         this.service = service;
     }
 
-    @PostMapping("/item")  // ← barra também
+    @PostMapping("/item")  
     public ResponseEntity<Void> adicionarItem(@RequestBody DtoRequest dto) {
         service.adicionarItem(dto);
         return ResponseEntity.status(HttpStatus.CREATED).build();
