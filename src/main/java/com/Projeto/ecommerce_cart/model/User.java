@@ -2,10 +2,12 @@ package com.Projeto.ecommerce_cart.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 
 @Entity
 @Data
-@Table(name = "user")
+@Table(name = "users")
+@ToString(exclude = "cart")
 public class User {
 
     @Id
@@ -13,7 +15,7 @@ public class User {
     private long id;
 
 
-    @OneToOne(mappedBy = "user_id")
+    @OneToOne(mappedBy = "user")
     private Cart cart;
 
 

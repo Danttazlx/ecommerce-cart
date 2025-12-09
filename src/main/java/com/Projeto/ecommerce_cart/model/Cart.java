@@ -2,6 +2,7 @@ package com.Projeto.ecommerce_cart.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 import org.hibernate.query.criteria.JpaOrder;
 
 import java.util.ArrayList;
@@ -9,7 +10,8 @@ import java.util.List;
 
 @Entity
 @Data
-@Table(name = "cart")
+@Table(name = "carts")
+@ToString(exclude = "items")
 public class Cart {
 
     @Id
@@ -21,15 +23,11 @@ public class Cart {
     @JoinColumn(name = "user_id", unique = true )
     private User user;
 
-    @ManyToOne
-    @JoinColumn(name = "product_id")
-    private Product product;
 
-
-    @OneToMany(mappedBy = "cart_id",cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "cart",cascade = CascadeType.ALL)
     private List<Item> items = new ArrayList<>();
 
-
-
-
+    public List<Item> getItems() {
+        return items;
+    }
 }
