@@ -80,16 +80,4 @@ INSERT INTO carts (user_id) VALUES (1);
 - **carts** - carrinhos (1 por usuário)
 - **items** - itens do carrinho
 
----
 
-## 📝 Próximos Passos
-
-- Listar itens do carrinho
-- Remover item
-- Calcular total
-- Testes automatizados
-- Documentação (Swagger)
-
----
-
-⭐ **Se curtiu, deixa uma star!** ⭐
