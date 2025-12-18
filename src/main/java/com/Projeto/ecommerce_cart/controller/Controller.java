@@ -21,13 +21,4 @@ public class CartController {
         service.adicionarItem(dto);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
-
-
-    @DeleteMapping("/item")
-    public ResponseEntity<Void> delete(@RequestBody DtoDelete dtoDelete) {
-        service.itemDelete(dtoDelete);
-        return ResponseEntity.status(HttpStatus.OK).build();
-
-
-    }
 }
