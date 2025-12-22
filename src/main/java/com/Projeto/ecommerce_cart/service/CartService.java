@@ -18,7 +18,7 @@ public class CartService {
     private final ProductRepository productRepository;
     private final ItemRepository itemRepository;
 
-    public CartService(CartRepository cartRepo, ProductRepository productRepo, UserRepository userRepo, ItemRepository itemRepo) {
+    public CartService(CartRepository cartRepo, ProductRepository productRepo, ItemRepository itemRepo) {
         this.cartRepository = cartRepo;
         this.productRepository = productRepo;
         this.itemRepository = itemRepo;
@@ -42,11 +42,9 @@ public class CartService {
     }
 
 
-    public void itemDelete(DtoDelete dtoDelite) {
-
-        var delete = itemRepository.findById(dtoDelite.productId)
+    public void removerProdutoDoCarrinho(Long Id) {
+        var delete = itemRepository.findById(Id)
                 .orElseThrow(() -> new DeleteNotFoundException("Product Not Found"));
-
                itemRepository.delete(delete);
 
     }

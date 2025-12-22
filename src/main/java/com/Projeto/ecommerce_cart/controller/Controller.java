@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/cart")
 public class Controller {
 
-    private final  CartService service;
+    private final CartService service;
 
     public Controller(CartService service) {
         this.service = service;
@@ -22,4 +22,11 @@ public class Controller {
         service.adicionarItem(dto);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
+
+    @DeleteMapping("{Id}")
+    public ResponseEntity<Void> deleteItem(@PathVariable Long Id) {
+        service.removerProdutoDoCarrinho(Id);
+        return ResponseEntity.noContent().build();
+    }
+
 }
