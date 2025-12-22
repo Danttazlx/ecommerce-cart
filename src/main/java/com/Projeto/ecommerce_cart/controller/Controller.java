@@ -1,6 +1,5 @@
 package com.Projeto.ecommerce_cart.controller;
 
-import com.Projeto.ecommerce_cart.dto.DtoDelete;
 import com.Projeto.ecommerce_cart.dto.DtoRequest;
 import com.Projeto.ecommerce_cart.service.CartService;
 import org.springframework.http.HttpStatus;

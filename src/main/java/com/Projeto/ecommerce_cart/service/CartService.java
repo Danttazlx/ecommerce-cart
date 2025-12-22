@@ -1,5 +1,4 @@
 package com.Projeto.ecommerce_cart.service;
-import com.Projeto.ecommerce_cart.dto.DtoDelete;
 import com.Projeto.ecommerce_cart.dto.DtoRequest;
 import com.Projeto.ecommerce_cart.exception.CartNotFoundException;
 import com.Projeto.ecommerce_cart.exception.DeleteNotFoundException;
@@ -8,7 +7,6 @@ import com.Projeto.ecommerce_cart.model.Item;
 import com.Projeto.ecommerce_cart.repository.CartRepository;
 import com.Projeto.ecommerce_cart.repository.ItemRepository;
 import com.Projeto.ecommerce_cart.repository.ProductRepository;
-import com.Projeto.ecommerce_cart.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 @Service
