@@ -39,11 +39,9 @@ public class CartService {
         cartRepository.save(cart);
     }
 
-
     public void removerProdutoDoCarrinho(Long Id) {
         var delete = itemRepository.findById(Id)
                 .orElseThrow(() -> new DeleteNotFoundException("Product Not Found"));
-               itemRepository.delete(delete);
-
+        itemRepository.delete(delete);
     }
 }
